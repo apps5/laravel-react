@@ -37,24 +37,11 @@ RUN groupadd -g 1000 www && useradd -u 1000 -ms /bin/bash -g www www
 
 # Set working directory
 WORKDIR /var/www
-
-# Copy application files
-#COPY composer.json composer.lock /var/www/
-#RUN chown -R www-data:www-data /var/www && chmod -R 775 /var/www
-
 RUN chmod -R 775 /var/www
 
 # Copy application files
 #COPY . /var/www/
 ADD . /var/www
-
-
-# Copy setup.sh and make it executable
-COPY ./setup.sh /usr/local/bin/setup.sh
-RUN chmod +x /usr/local/bin/setup.sh
-# Run the setup script during the build
-RUN /usr/local/bin/setup.sh
-
 
 # Change current user to www
 USER www
