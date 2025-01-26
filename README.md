@@ -17,7 +17,7 @@ docker compose up -d
 Установить зависимости composer:
 
 ```
-docker compose exec backend_l_r composer install
+docker compose exec backend composer install
 ```
 
 Открыть в браузере http://react-laravel-app.local
