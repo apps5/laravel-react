@@ -21,3 +21,12 @@ docker compose exec backend composer install
 ```
 
 Открыть в браузере http://react-laravel-app.local
+
+Пользователь:
+```
+maximov@test.ru
+```
+```
+123456
+```
+или зарегистрировать нового
