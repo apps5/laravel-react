@@ -29,7 +29,7 @@ docker compose exec backend_l_r composer install
 Запускаем команду сборки в контейнере node:
 
 ```
-docker-compose exec node /bin/bash -lc 'npm run build'
+docker-compose exec node_l_r /bin/bash -lc 'npm run build'
 ```
 
 В папке public/build появятся файлы сборки.
@@ -37,7 +37,7 @@ docker-compose exec node /bin/bash -lc 'npm run build'
 Чтобы на локальный сайт подключилась версия для production отключаем контейнер node (где запущен vite):
 
 ```
-docker-compose stop node
+docker-compose stop node_l_r
 rm public/hot
 ```
 
@@ -48,5 +48,5 @@ rm public/hot
 Чтобы после этих операций снова работать с vite запускаем контейнер node:
 
 ```
-docker-compose start node
+docker-compose start node_l_r
 ```
